@@ -1,2 +1,2 @@
 # flask-todo
-This a app for todo
+This an app for todo
