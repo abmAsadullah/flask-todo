@@ -10,12 +10,14 @@
     <table>
         <tr>
             <th>My Work</th>
+            <th>Count Time</th>
             <th>Added Time</th>
             <th>Edit/Delete</th>
         </tr>
         {% for task in tasks %}
             <tr>
                 <td>{{ task.content }}</td>
+                <td>{{ task.count_time }}</td>
                 <td>{{ task.date_created.date() }}</td>
                 <td>
                     <a href="/edit/{{ task.id}}">Edit</a>
@@ -26,6 +28,7 @@
     </table>
     <form action="/" method="POST">
         <input type="text" name="content" id="content">
+        <input type="number" name="count_time" id="count_time">
         <input type="submit" value="Add ToDo">
     </form>
 </div>
